@@ -1,4 +1,4 @@
-// Define exchange rates
+// Definir los valores
 let exchangeRates = {
     'COP': {
       'EUR': 0.00024,
@@ -14,21 +14,19 @@ let exchangeRates = {
     }
   };
   
- // Get the necessary elements from the HTML
+ // Traer los elementos
 let monedaUno = document.getElementById('moneda-uno');
 let monedaDos = document.getElementById('moneda-dos');
 let cantidadUno = document.getElementById('cantidad-uno');
 let tasaButton = document.getElementById('tasa');
 let cambio = document.getElementById('cambio');
 
-// Add an event listener to the button
+// Agregar el evento al boton
 tasaButton.addEventListener('click', () => {
-  // Get the values from the input and select elements
   let amount = parseFloat(cantidadUno.value);
   let selectedMonedaUno = monedaUno.value;
   let selectedMonedaDos = monedaDos.value;
 
-  // Perform the conversion based on the selected currencies
   let result;
   if (selectedMonedaUno === 'COP') {
     if (selectedMonedaDos === 'USD') {
@@ -53,7 +51,6 @@ tasaButton.addEventListener('click', () => {
       result = amount * 1.08;
     }
   }
-
-  // Display the result
+// Mostrar el resultado
   cambio.textContent = `Result: ${result}`;
 });
