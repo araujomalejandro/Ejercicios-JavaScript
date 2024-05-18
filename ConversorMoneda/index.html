@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Conversor de Divisa</title>
+</head>
+<body>
+
+    <h1>Conversor de Divisa</h1>
+    <p>Escoge la moneda y la cantidad a convertir</p>
+    
+    <div class="container">
+        <div class="moneda">
+            <select id="moneda-uno">
+                <option value="COP">COP</option>
+                <option value="EUR">EUR</option>
+                <option value="USD" selected>USD</option>
+            </select>
+
+            <input 
+            type="number" 
+            id="cantidad-uno" 
+            placeholder="0"  
+            value="1"
+            >
+
+        </div>
+
+        <div class="moneda" class="tasa-cambio-container">
+            <select id="moneda-dos">
+                <option value="COP">COP</option>
+                <option value="EUR" selected>EUR</option>
+                <option value="USD">USD</option>
+            </select>
+
+            <button class="btn" id="tasa">
+                Convertir
+            </button>
+        </div>
+
+        <div >
+            <div class="cambio" id="cambio"></div>
+        </div>
+
+      
+    </div>
+
+<script src="main.js"></script>
+</body>
+</html>
